@@ -13,7 +13,7 @@ body {
   background: url(../images/sack.jpeg);
   background-size: contain;
   display: flex;
-  display: flex;
+  flex-direction: column;
   height: 100vh;
   flex-wrap: wrap;
   align-items: center;
@@ -23,6 +23,14 @@ body {
 #section1 {
   
 
+}
+
+#intro {
+  padding: 20px 20px;
+  background: rgba(179, 174, 174, 0.63);
+  margin: 20px;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
 }
 
 .imputmaxweight {
@@ -36,4 +44,14 @@ body {
   border: 3px solid rgb(0, 0, 0);
   padding: 10px 20px;
   width: 100%;
+}
+
+.items {
+  padding: 20px 20px;
+  background: rgba(153, 149, 149, 0.63);
+  margin: 10px;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
 }
