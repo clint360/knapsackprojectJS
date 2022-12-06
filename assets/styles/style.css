@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background: url(../images/sack.jpeg);
+  background-size: fill;
+  display: flex;
+}
+
+#section1 {
+
+}
