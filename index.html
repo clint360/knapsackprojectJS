@@ -13,14 +13,14 @@
   </div>
   <div id="section1">
     <div class="inputmaxweight">
-      <input type="text" placeholder="Input Maximum Weight (kg)" class="input">
+      <input type="text" placeholder="Input Maximum Weight (kg)" class="input" required>
     </div>
   </div>
   <div class="items">
     <div class="manipulate">
-    <select> 
-      <option class="item" value="">item1</option>
-      <option class="item" value="">item2</option>
+    <select class="selected"> 
+      <option class="item" value="item1">item1</option>
+      <option class="item" value="item2">item2</option>
       <option class="item" value="">item3</option>
       <option class="item" value="">item4</option>
       <option class="item" value="">item5</option>
@@ -30,15 +30,16 @@
       <option class="item" value="">item9</option>
       <option class="item" value="">item10</option>
     </select>
-    <div class="add"><button>Add</button></div>
+    <div><button id="add">Add</button></div>
   </div>
     <fieldset>
-      <legend>Clicked value</legend>
-      <textarea id="result" readonly></textarea>
+      <legend>Clicked Item</legend>
+      <textarea id="clicked" readonly></textarea>
    
    <legend>Status</legend>
-   <textarea id="result" readonly></textarea>
+   <textarea id="status" readonly></textarea>
   </fieldset>
   </div>
 </body>
+<script src="assets/scripts/script.js"></script>
 </html>
