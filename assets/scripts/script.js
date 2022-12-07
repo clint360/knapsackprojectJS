@@ -34,3 +34,24 @@ function getData() {
     clicked.textContent += items[0].name + "; ";
 });
 }
+
+const item1 = document.getElementById("item1");
+const item2 = document.getElementById("item2");
+const item3 = document.getElementById("item3");
+const item4 = document.getElementById("item4");
+const item5 = document.getElementById("item5");
+const item6 = document.getElementById("item6");
+const item7 = document.getElementById("item7");
+const item8 = document.getElementById("item8");
+const item9 = document.getElementById("item9");
+const item10 = document.getElementById("item10");
+const item11 = document.getElementById("item11");
+const item12 = document.getElementById("item12");
+const item13 = document.getElementById("item13");
+const item14 = document.getElementById("item14");
+const item15 = document.getElementById("item15");
+const item16 = document.getElementById("item16");
+const item17 = document.getElementById("item17");
+const item18 = document.getElementById("item18");
+const item19 = document.getElementById("item19");
+const item20 = document.getElementById("item20");
