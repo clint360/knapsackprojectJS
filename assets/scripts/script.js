@@ -15,3 +15,22 @@ function getData() {
   let sumOfWeights = 0;
   let sumOfValues = 0;
 
+  addButtonElement.addEventListener("click", () => { 
+    if (sumOfWeights >= finInputData) {
+      addButtonElement.disabled = true;
+      state.textContent = "KnapSack Full!";
+      state.style = "background: red; animation: shake"
+      addButtonElement.style = "display: none"
+    }
+
+    weightCount++;
+    valueCount++;
+    sumOfWeights += items[weightCount].weight;
+    sumOfValues += items[valueCount].value;
+    clicked.textContent = ''
+
+    status.textContent = "Weight:" + " " + sumOfWeights + "kgs" + 
+    "  " + "Value:" + " " + sumOfValues + "FCFA";    
+    clicked.textContent += items[0].name + "; ";
+});
+}
