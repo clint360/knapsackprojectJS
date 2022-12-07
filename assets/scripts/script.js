@@ -55,3 +55,28 @@ const item17 = document.getElementById("item17");
 const item18 = document.getElementById("item18");
 const item19 = document.getElementById("item19");
 const item20 = document.getElementById("item20");
+
+let items = [
+  { name: "iPhone13", weight: 0.75, value: 500000},
+  { name: "Laptop", weight: 3, value: 250000},
+  { name: "HeadPhones", weight: 0.25, value: 2000},
+  { name: "Yams", weight: 1, value: 1500},
+  { name: "TeddyBear", weight: 0.5, value: 4000},
+  { name: "Mango", weight: 0.5, value: 1000},
+  { name: "iMac", weight: 3, value: 300000},
+  { name: "Pillow", weight: 0.5, value: 1500},
+  { name: "Corn", weight: 0.5, value: 500},
+  { name: "Horn", weight: 0.75, value: 1500},
+  { name: "Trumpet", weight: 2, value: 13500},
+  { name: "Shacker", weight: 0.5, value: 2000},
+  { name: "Mouse", weight: 0.5, value: 2000},
+  { name: "Keyboard", weight: 1, value: 2500},
+  { name: "RCHelicopter", weight: 1, value: 10000},
+  { name: "USB Cable", weight: 0.25, value: 1000},
+  { name: "BluetoothSpeaker", weight: 1.5, value: 5000},
+  { name: "GamePads", weight: 1, value: 2000},
+  { name: "PS4", weight: 3, value: 200000},
+  { name: "iPad", weight: 2, value: 150000}, 
+]
+
+getData()
