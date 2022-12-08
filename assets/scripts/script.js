@@ -19,13 +19,12 @@ function getData() {
   let sumOfValues = 0;
 
   addButtonElement.addEventListener("click", () => {
-    clicked.textContent += items[weightCount].name + "; ";
     arr[weightCount].style = "display: none";
     weightCount++;
     valueCount++;
     sumOfWeights += items[weightCount].weight;
     sumOfValues += items[valueCount].value;
-
+    clicked.textContent += items[weightCount].name + "; ";
     status.textContent =
       "Weight:" +
       " " +
