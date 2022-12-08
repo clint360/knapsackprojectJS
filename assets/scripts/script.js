@@ -1,16 +1,16 @@
 let addButtonElement = document.getElementById("add");
 let status = document.getElementById("status");
 let clicked = document.getElementById("clicked");
-let inputData = document.querySelector('.input');
+let inputData = document.querySelector(".input");
 let state = document.getElementById("state");
-let maxW = document.getElementById('max-w');
-let data = parseInt(prompt('Input max weight'))
-inputData.style = "display: none"
+let maxW = document.getElementById("max-w");
+let data = parseInt(prompt("Input max weight"));
+inputData.style = "display: none";
 maxW.textContent = data;
 inputData.value = data;
-document.querySelector('.input').addEventListener('click', () => {
-  console.log(inputData)
-})
+document.querySelector(".input").addEventListener("click", () => {
+  console.log(inputData);
+});
 
 function getData() {
   let weightCount = 0;
@@ -18,25 +18,32 @@ function getData() {
   let sumOfWeights = 0;
   let sumOfValues = 0;
 
-  addButtonElement.addEventListener("click", () => { 
+  addButtonElement.addEventListener("click", () => {
     clicked.textContent += items[weightCount].name + "; ";
-    arr[weightCount].style = "display: none"
+    arr[weightCount].style = "display: none";
     weightCount++;
     valueCount++;
     sumOfWeights += items[weightCount].weight;
     sumOfValues += items[valueCount].value;
 
-    status.textContent = "Weight:" + " " + sumOfWeights + "kgs" + 
-    "  " +  " Value:" + " " + sumOfValues + "FCFA";    
-    
+    status.textContent =
+      "Weight:" +
+      " " +
+      sumOfWeights +
+      "kgs" +
+      "  " +
+      " Value:" +
+      " " +
+      sumOfValues +
+      "FCFA";
 
     if (sumOfWeights >= data - 1) {
       addButtonElement.disabled = true;
       state.textContent = "KnapSack Full!   PRESS F5";
-      state.style = "background: red; animation: shake"
-      addButtonElement.style = "display: none"
+      state.style = "background: red; animation: shake";
+      addButtonElement.style = "display: none";
     }
-});
+  });
 }
 
 const item1 = document.getElementById("item1");
@@ -60,29 +67,50 @@ const item18 = document.getElementById("item18");
 const item19 = document.getElementById("item19");
 const item20 = document.getElementById("item20");
 
-arr = [item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20]
+arr = [
+  item1,
+  item2,
+  item3,
+  item4,
+  item5,
+  item6,
+  item7,
+  item8,
+  item9,
+  item10,
+  item11,
+  item12,
+  item13,
+  item14,
+  item15,
+  item16,
+  item17,
+  item18,
+  item19,
+  item20,
+];
 
 let items = [
-  { name: "iPhone13", weight: 0.75, value: 500000},
-  { name: "Laptop", weight: 3, value: 250000},
-  { name: "HeadPhones", weight: 0.25, value: 2000},
-  { name: "Yams", weight: 1, value: 1500},
-  { name: "TeddyBear", weight: 0.5, value: 4000},
-  { name: "Mango", weight: 0.5, value: 1000},
-  { name: "iMac", weight: 3, value: 300000},
-  { name: "Pillow", weight: 0.5, value: 1500},
-  { name: "Corn", weight: 0.5, value: 500},
-  { name: "Horn", weight: 0.75, value: 1500},
-  { name: "Trumpet", weight: 2, value: 13500},
-  { name: "Shacker", weight: 0.5, value: 2000},
-  { name: "Mouse", weight: 0.5, value: 2000},
-  { name: "Keyboard", weight: 1, value: 2500},
-  { name: "RCHelicopter", weight: 1, value: 10000},
-  { name: "USB Cable", weight: 0.25, value: 1000},
-  { name: "BluetoothSpeaker", weight: 1.5, value: 5000},
-  { name: "GamePads", weight: 1, value: 2000},
-  { name: "PS4", weight: 3, value: 200000},
-  { name: "iPad", weight: 2, value: 150000}, 
-]
+  { name: "iPhone13", weight: 0.75, value: 500000 },
+  { name: "Laptop", weight: 3, value: 250000 },
+  { name: "HeadPhones", weight: 0.25, value: 2000 },
+  { name: "Yams", weight: 1, value: 1500 },
+  { name: "TeddyBear", weight: 0.5, value: 4000 },
+  { name: "Mango", weight: 0.5, value: 1000 },
+  { name: "iMac", weight: 3, value: 300000 },
+  { name: "Pillow", weight: 0.5, value: 1500 },
+  { name: "Corn", weight: 0.5, value: 500 },
+  { name: "Horn", weight: 0.75, value: 1500 },
+  { name: "Trumpet", weight: 2, value: 13500 },
+  { name: "Shacker", weight: 0.5, value: 2000 },
+  { name: "Mouse", weight: 0.5, value: 2000 },
+  { name: "Keyboard", weight: 1, value: 2500 },
+  { name: "RCHelicopter", weight: 1, value: 10000 },
+  { name: "USB Cable", weight: 0.25, value: 1000 },
+  { name: "BluetoothSpeaker", weight: 1.5, value: 5000 },
+  { name: "GamePads", weight: 1, value: 2000 },
+  { name: "PS4", weight: 3, value: 200000 },
+  { name: "iPad", weight: 2, value: 150000 },
+];
 
-getData()
+getData();
