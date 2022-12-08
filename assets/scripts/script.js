@@ -1,10 +1,12 @@
 let addButtonElement = document.getElementById("add");
 let status = document.getElementById("status");
 let clicked = document.getElementById("clicked");
-let inputData = document.querySelector('.input').value;
-let state = document.getElementById("state")
-let finInputData = parseInt(inputData.value);
- 
+let inputData = document.querySelector('.input');
+let state = document.getElementById("state");
+let maxW = document.getElementById('maxW');
+let data = parseInt(prompt('Input max weight'))
+maxW.textContent = data;
+inputData.value = data;
 document.querySelector('.input').addEventListener('click', () => {
   console.log(inputData)
 })
@@ -16,22 +18,23 @@ function getData() {
   let sumOfValues = 0;
 
   addButtonElement.addEventListener("click", () => { 
-    if (sumOfWeights >= finInputData) {
+    clicked.textContent += items[weightCount].name + "; ";
+    arr[weightCount].style = "display: none"
+    weightCount++;
+    valueCount++;
+    sumOfWeights += items[weightCount].weight;
+    sumOfValues += items[valueCount].value;
+
+    status.textContent = "Weight:" + " " + sumOfWeights + "kgs" + 
+    "  " + "Value:" + " " + sumOfValues + "FCFA";    
+    
+
+    if (sumOfWeights >= data - 1) {
       addButtonElement.disabled = true;
       state.textContent = "KnapSack Full!";
       state.style = "background: red; animation: shake"
       addButtonElement.style = "display: none"
     }
-
-    weightCount++;
-    valueCount++;
-    sumOfWeights += items[weightCount].weight;
-    sumOfValues += items[valueCount].value;
-    clicked.textContent = ''
-
-    status.textContent = "Weight:" + " " + sumOfWeights + "kgs" + 
-    "  " + "Value:" + " " + sumOfValues + "FCFA";    
-    clicked.textContent += items[0].name + "; ";
 });
 }
 
@@ -55,6 +58,8 @@ const item17 = document.getElementById("item17");
 const item18 = document.getElementById("item18");
 const item19 = document.getElementById("item19");
 const item20 = document.getElementById("item20");
+
+arr = [item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20]
 
 let items = [
   { name: "iPhone13", weight: 0.75, value: 500000},

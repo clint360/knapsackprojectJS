@@ -13,7 +13,7 @@
   </div>
   <div id="section1">
     <div class="inputmaxweight">
-      <input  type="number" placeholder="Input Maximum Weight (kg)" class="input" id="input">
+      <input  type="number" max="23" placeholder="Input Maximum Weight (kg)" class="input" id="input">
     </div>
   </div>
   <div class="items">
@@ -43,13 +43,15 @@
     <div class="addclass"><button id="add">Add</button></div>
   </div>
       <legend>Selected Item</legend>
-      <div id="clicked" readonly>0</div>
+      <div id="clicked" readonly>&nbsp;</div>
    
    <legend>Sum</legend>
    <div id="status" readonly>0</div>
 
    <legend>Status</legend>
    <div id="state" readonly>Space Available</div>
+
+   Max Weight:<span id="maxW"> </span>
   </div>
 </body>
 <script src="assets/scripts/script.js"></script>
