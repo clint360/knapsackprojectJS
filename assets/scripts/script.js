@@ -5,6 +5,7 @@ let inputData = document.querySelector('.input');
 let state = document.getElementById("state");
 let maxW = document.getElementById('maxW');
 let data = parseInt(prompt('Input max weight'))
+inputData.style = "display: none"
 maxW.textContent = data;
 inputData.value = data;
 document.querySelector('.input').addEventListener('click', () => {
@@ -26,12 +27,12 @@ function getData() {
     sumOfValues += items[valueCount].value;
 
     status.textContent = "Weight:" + " " + sumOfWeights + "kgs" + 
-    "  " + "Value:" + " " + sumOfValues + "FCFA";    
+    "  " +  " Value:" + " " + sumOfValues + "FCFA";    
     
 
     if (sumOfWeights >= data - 1) {
       addButtonElement.disabled = true;
-      state.textContent = "KnapSack Full!";
+      state.textContent = "KnapSack Full!   PRESS F5";
       state.style = "background: red; animation: shake"
       addButtonElement.style = "display: none"
     }
