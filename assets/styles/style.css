@@ -15,7 +15,6 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  flex-flow: wrap;
   align-items: center;
   justify-content: center;
 }
@@ -34,22 +33,21 @@ body {
 
 .imputmaxweight {
   text-align: center;
-
 }
 
 .input {
   border-radius: 8px;
-  border: 3px solid #000000;
+  border: 3px solid #000;
   padding: 10px 30px;
   width: 100%;
   margin-left: -30px;
 }
 
 .items {
-  padding: 20px 20px;
+  padding: 20px;
   background: #ffffffd7;
   margin: 10px;
-  color: #000000;
+  color: #000;
   border-radius: 5px;
   width: 40%;
   font-weight: 500;
@@ -65,7 +63,7 @@ body {
   flex-basis: 48%;
   border-radius: 4px;
   color: white;
-  background: #ff0000;
+  background: #ff0000b7;
   border: 2px solid white;
   margin: 2px;
 }
@@ -112,4 +110,4 @@ body {
   color: white;
   padding: 1px 5px;
   background: #03c403;
-} 
+}
