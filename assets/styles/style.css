@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system;
   font-size: 105%;
 }
 
@@ -10,21 +10,21 @@ html {
 }
 
 body {
-  background: url(../images/sack.jpeg);
+  background: url("../images/sack.jpeg");
   background-size: cover;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  flex-wrap: wrap;
+  flex-flow: wrap;
   align-items: center;
   justify-content: center;
 }
 
 #intro {
-  padding: 20px 20px;
-  background: rgba(179, 174, 174, 0.63);
+  padding: 20px;
+  background: #b3aeae;
   margin: 20px;
-  color: rgb(0, 0, 0);
+  color: #000;
   border-radius: 5px;
 }
 
@@ -39,7 +39,7 @@ body {
 
 .input {
   border-radius: 8px;
-  border: 3px solid rgb(0, 0, 0);
+  border: 3px solid #000000;
   padding: 10px 30px;
   width: 100%;
   margin-left: -30px;
@@ -47,9 +47,9 @@ body {
 
 .items {
   padding: 20px 20px;
-  background: rgba(255, 255, 255, 0.74);
+  background: #ffffffd7;
   margin: 10px;
-  color: rgb(0, 0, 0);
+  color: #000000;
   border-radius: 5px;
   width: 40%;
   font-weight: 500;
@@ -65,7 +65,7 @@ body {
   flex-basis: 48%;
   border-radius: 4px;
   color: white;
-  background: rgba(255, 0, 0, 0.726);
+  background: #ff0000;
   border: 2px solid white;
   margin: 2px;
 }
@@ -77,14 +77,14 @@ body {
 #add {
   width: 100%;
   color: white;
-  background: rgba(4, 197, 4, 0.63);
+  background: #03c403;
   border: 2px solid white;
   border-radius: 4px;
   margin: 2px;
-  
 }
 
-#clicked, #status {
+#clicked,
+#status {
   width: 100%;
   border-radius: 5px;
   border: 2px solid white;
@@ -95,11 +95,12 @@ body {
 }
 
 #clicked {
-  background: rgba(0, 0, 0, 0.6);
+  background: #000000c7;
   color: white;
 }
+
 #status {
-  background: rgba(107, 0, 0, 0.7);
+  background: #6b0000d0;
   color: white;
 }
 
@@ -108,7 +109,7 @@ body {
   height: auto;
   border: 2px solid white;
   border-radius: 5px;
-  color: rgb(255, 255, 255);
+  color: white;
   padding: 1px 5px;
-  background: rgba(1, 228, 1, 0.575);
+  background: #03c403;
 } 
