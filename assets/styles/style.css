@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: system-ui, -apple-system;
-  font-size: 100%;
+  font-size: 97%;
 }
 
 html {
@@ -20,7 +20,7 @@ body {
 
 #intro {
   padding: 20px;
-  margin: 20px;
+  margin: 5px;
   color: #000;
   border-radius: 5px;
   font-size: 2rem;
@@ -111,6 +111,8 @@ body {
 #status {
   background: #6b0000d0;
   color: white;
+  min-height: 20px;
+  height: auto;
 }
 
 .left {
@@ -132,6 +134,7 @@ body {
   color: white;
   padding: 1px 5px;
   background: #00f100;
+  border: 2px solid white;
 }
 
 @keyframes shake {
