@@ -61,23 +61,28 @@ body {
 }
 
 #selected {
-  flex-basis: 80%;
+  flex-basis: 85%;
   border-radius: 4px;
   background: transparent;
   border: 2px solid white;
   margin: 2px;
 }
 
-.item {
-  background: transparent;
+.item:disabled {
+  display: none;
+}
+
+#selected:disabled {
+  color: red;
 }
 
 .addclass {
-  flex-basis: 12%;
+  width: 10px;
 }
 
 #add {
-  width: 100%;
+  width: 50px;
+  padding: 5px;
   color: white;
   background: #03c403;
   border: 2px solid white;
@@ -100,6 +105,7 @@ body {
   background: #000000c7;
   color: white;
   height: 200px;
+  overflow-y: scroll;
 }
 
 #status {
@@ -113,6 +119,11 @@ body {
 
 #max-w {
   color: red;
+  font-size: 20px;
+  font-weight: 500;
+  background: white;
+  border-radius: 50%;
+  padding: 0 10px;
 }
 
 #state {

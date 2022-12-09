@@ -13,11 +13,12 @@
       <h1>🎒KnapSack</h1>
     </div>
     <div class="inputmaxweight">
-      <input  type="number" max="23" placeholder="📝Input Maximum Weight (kg)" class="input" id="input">
+      <input  type="number" placeholder="📝Input Maximum Weight (kg)" class="input" id="input">
+      <span class="addclass"><button id="add" onclick="Knapsack()">✔️</button></span>
     </div>
     <div class="manipulate">
     <select id="selected">
-      <option> Select Items</option>
+      <option> Choose Items</option>
       <option class="item item1" id="item1" value="iPhone13">iPhone13</option>
       <option class="item item2" id="item2" value="Laptop">Laptop</option>
       <option class="item item3" id="item3" value="HeadPhones">HeadPhones</option>
@@ -39,22 +40,18 @@
       <option class="item item19" id="item19" value="PS4">PS4</option>
       <option class="item item20" id="item20" value="iPad">iPad</option>
     </select>
-    <div class="addclass"><button id="add">➕Add</button></div>
   </div> <br>
       <legend>Items in the Sack:</legend>
-      <div id="clicked" readonly>&nbsp;</div> <br>
+      <div id="clicked" readonly></div> <br>
       <div class="left">Status&nbsp; <span id="state" readonly>&nbsp&nbsp</span></div> <br>
    <legend>Data</legend>
    <div id="status" readonly>0</div> <br>
 
    Max Weight:&nbsp;<span id="max-w"> </span><br>
 
-   <button style="padding: 5px; background: rgba(240, 85, 14, 0.986); border-radius: 5px; border: none; float: right;" onclick="refreshpage()">🔄Reset</button>
+   <button style="padding: 5px; background: rgba(240, 85, 14, 0.986); border-radius: 5px; border: none; float: right;" id="reset">🔄Reset</button>
   </div>
 </body>
-<script>
-  function refreshPage(){
-    window.location.reload();
-} 
+<script src="assets/scripts/app.js">
 </script>
 </html>
