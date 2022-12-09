@@ -8,52 +8,53 @@
   <title>KnapSack</title>
 </head>
 <body>
-  <div id="intro">
-    <h1>Welcome to the KnapSack Weight Calculator</h1>
-  </div>
-  <div id="section1">
-    <div class="inputmaxweight">
-      <input  type="number" max="23" placeholder="Input Maximum Weight (kg)" class="input" id="input">
-    </div>
-  </div>
   <div class="items">
+    <div id="intro">
+      <h1>🎒KnapSack</h1>
+    </div>
+    <div class="inputmaxweight">
+      <input  type="number" max="23" placeholder="📝Input Maximum Weight (kg)" class="input" id="input">
+    </div>
     <div class="manipulate">
     <select id="selected">
-      <option>items</option>
-      <option  id="item1" value="">iPhone13</option>
-      <option  id="item2" value="">Laptop</option>
-      <option class="item item3" id="item3" value="">HeadPhones</option>
-      <option class="item item4" id="item4" value="">Yams</option>
-      <option class="item item5" id="item5" value="">TeddyBear</option>
-      <option class="item item6" id="item6" value="">Mango</option>
-      <option class="item item7" id="item7" value="">iMac</option>
-      <option class="item item8" id="item8" value="">Pillow</option>
-      <option class="item item9" id="item9" value="">Corn</option>
-      <option class="item item10" id="item10" value="">Horn</option>
-      <option class="item item11" id="item11" value="">Trumpet</option>
-      <option class="item item12" id="item12" value="">Shacker</option>
-      <option class="item item13" id="item13" value="">Mouse</option>
-      <option class="item item14" id="item14" value="">Keyboard</option>
-      <option class="item item15" id="item15" value="">RCHelicopter</option>
-      <option class="item item16" id="item16" value="">USB Cable</option>
-      <option class="item item17" id="item17" value="">BT Speaker</option>
-      <option class="item item18" id="item18" value="">Gamepads</option>
-      <option class="item item19" id="item19" value="">PS4</option>
-      <option class="item item20" id="item20" value="">iPad</option>
+      <option> Select Items</option>
+      <option class="item item1" id="item1" value="iPhone13">iPhone13</option>
+      <option class="item item2" id="item2" value="Laptop">Laptop</option>
+      <option class="item item3" id="item3" value="HeadPhones">HeadPhones</option>
+      <option class="item item4" id="item4" value="Yams">Yams</option>
+      <option class="item item5" id="item5" value="TeddyBear">TeddyBear</option>
+      <option class="item item6" id="item6" value="Mango">Mango</option>
+      <option class="item item7" id="item7" value="iMac">iMac</option>
+      <option class="item item8" id="item8" value="Pillow">Pillow</option>
+      <option class="item item9" id="item9" value="Corn">Corn</option>
+      <option class="item item10" id="item10" value="Horn">Horn</option>
+      <option class="item item11" id="item11" value="Trumpet">Trumpet</option>
+      <option class="item item12" id="item12" value="Shacker">Shacker</option>
+      <option class="item item13" id="item13" value="Mouse">Mouse</option>
+      <option class="item item14" id="item14" value="Keyboard">Keyboard</option>
+      <option class="item item15" id="item15" value="RCHelicopter">RCHelicopter</option>
+      <option class="item item16" id="item16" value="USB Cable">USB Cable</option>
+      <option class="item item17" id="item17" value="BT Speaker">BT Speaker</option>
+      <option class="item item18" id="item18" value="Gamepads">Gamepads</option>
+      <option class="item item19" id="item19" value="PS4">PS4</option>
+      <option class="item item20" id="item20" value="iPad">iPad</option>
     </select>
-    <div class="addclass"><button id="add">Add</button></div>
+    <div class="addclass"><button id="add">➕Add</button></div>
   </div> <br>
-      <legend>Selected Item</legend>
+      <legend>Items in the Sack:</legend>
       <div id="clicked" readonly>&nbsp;</div> <br>
-   
-   <legend>Sum</legend>
+      <div class="left">Status&nbsp; <span id="state" readonly>&nbsp&nbsp</span></div> <br>
+   <legend>Data</legend>
    <div id="status" readonly>0</div> <br>
 
-   <legend>Status</legend>
-   <div id="state" readonly>Space Available</div> <br>
+   Max Weight:&nbsp;<span id="max-w"> </span><br>
 
-   Max Weight:&nbsp;<span id="max-w"> </span>
+   <button style="padding: 5px; background: rgba(240, 85, 14, 0.986); border-radius: 5px; border: none; float: right;" onclick="refreshpage()">🔄Reset</button>
   </div>
 </body>
-<script src="assets/scripts/script.js"></script>
+<script>
+  function refreshPage(){
+    window.location.reload();
+} 
+</script>
 </html>

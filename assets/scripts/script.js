@@ -39,8 +39,11 @@ function getData() {
     if (sumOfWeights >= data - 1) {
       addButtonElement.disabled = true;
       state.textContent = "KnapSack Full!   PRESS F5";
-      state.style = "background: red; animation: shake";
-      addButtonElement.style = "display: none";
+      state.style = "background: red; animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both; transform: translate3d(0, 0, 0); backface-visibility: hidden; perspective: 1000px";
+      addButtonElement.addEventListener("click", () => {
+        addButtonElement.style = "backround: red; animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both; ";
+        state.style = "background: red; animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both; transform: translate3d(0, 0, 0); backface-visibility: hidden; perspective: 1000px";
+      })
     }
   });
 }
