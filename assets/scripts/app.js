@@ -30,12 +30,9 @@ function Knapsack() {
 					}
 				}
 				for (let i = 0; i < itemValues.length; i++) {
-
-					if (itemValues[i].weight + currentWeight > (inputElement.value - 1)) {
+					if (itemValues[i].weight + currentWeight > inputElement.value) {
 						if (selector[i].value === itemValues[i].name) {
 							selector[i].disabled = true;
-              document.querySelector("#state").style = "background: red";
-
 							if (selector[i].disabled === true) {
   
 								count++;
@@ -43,12 +40,13 @@ function Knapsack() {
 							if (count === itemValues.length) {
 								
 							}
-						}
+            }
 					}
 				}
         if(currentWeight >= (inputElement.value)) {
           document.querySelector("#state").style = "background: red";
-          selector.addEventListener('change', () => {document.querySelector(".items").style = "animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;";})
+            document.querySelector(".items").style = "animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;";
+            doneButtonElement.style = "display: none"
       }
 				document.querySelector('#status').innerHTML = "Current Weight:" + " " + currentWeight + "<br>" + "Current Value:" + " " + currentValue + "XAF";
 			}
