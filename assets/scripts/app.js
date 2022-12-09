@@ -32,8 +32,8 @@ function Knapsack() {
 				for (let i = 0; i < itemValues.length; i++) {
 					if (itemValues[i].weight + currentWeight > inputElement.value) {
 						if (selector[i].value === itemValues[i].name) {
-							selector[i].disabled = true;
-							if (selector[i].disabled === true) {
+							selector[i].value.disabled = true;
+							if (selector[i].value.disabled === true) {
   
 								count++;
 							}
@@ -78,3 +78,9 @@ let itemValues = [
 ]
 
 resetButtonElement.addEventListener("click", () => {window.location.reload()})
+document.addEventListener('keypress', (event)=> {
+  let keyCode = event.keyCode ? event.keyCode : event.which;
+
+  if(keyCode === 13) {
+    Knapsack();
+  }})
