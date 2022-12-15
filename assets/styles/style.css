@@ -38,7 +38,7 @@ body {
 
 .input {
   padding: 5px;
-  width: 70%;
+  width: 83%;
 }
 
 .items {
@@ -61,7 +61,7 @@ body {
 }
 
 #selected {
-  flex-basis: 85%;
+  flex-basis: 100%;
   border-radius: 4px;
   background: transparent;
   border: 2px solid white;
@@ -87,7 +87,7 @@ body {
   background: #03c403;
   border: 2px solid white;
   border-radius: 4px;
-  margin: 2px;
+  margin: 0;
 }
 
 #clicked,

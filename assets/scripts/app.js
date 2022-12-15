@@ -16,15 +16,15 @@ function Knapsack() {
 		inputElement.style = " animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;"
 	} else {
 		selector.addEventListener("change", () => {
+      selector[0].disabled = true;
       j++
 			if (currentWeight < inputElement.value) {
 
-				display.innerHTML += j + ". " + selector.value + "<br>" ;
-        selector.value.disabled = true
-				for (let i = 0; i < itemValues.length; i++) {
+				display.innerHTML += j + ". " + selector.value +" " ;
 
+				for (let i = 0; i < itemValues.length; i++) {
 					if (itemValues[i].name == selector.value) {
-            selector.value.disabled = true
+            display.innerHTML +=  "[" + itemValues[i].weight + "kgs]"  + "<br>";
 						currentWeight += itemValues[i].weight;
             currentValue  += itemValues[i].value;
 					}
@@ -32,8 +32,8 @@ function Knapsack() {
 				for (let i = 0; i < itemValues.length; i++) {
 					if (itemValues[i].weight + currentWeight > inputElement.value) {
 						if (selector[i].value === itemValues[i].name) {
-							selector[i].value.disabled = true;
-							if (selector[i].value.disabled === true) {
+							selector[i].disabled = true;
+							if (selector[i].disabled === true) {
   
 								count++;
 							}
@@ -46,7 +46,8 @@ function Knapsack() {
         if(currentWeight >= (inputElement.value)) {
           document.querySelector("#state").style = "background: red";
             document.querySelector(".items").style = "animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;";
-            doneButtonElement.style = "display: none"
+            doneButtonElement.style = "background: rgba(0, 0, 0, 0);"
+            doneButtonElement.textContent = " "
       }
 				document.querySelector('#status').innerHTML = "Current Weight:" + " " + currentWeight + "<br>" + "Current Value:" + " " + currentValue + "XAF";
 			}
