@@ -1,3 +1,26 @@
+const i1 = document.querySelector("#item1");
+ const i2 = document.querySelector("#item2");
+ const i3 = document.querySelector("#item3");
+ const i4 = document.querySelector("#item4");
+ const i5 = document.querySelector("#item5");
+ const i6 = document.querySelector("#item6");
+ const i7 = document.querySelector("#item7");
+ const i8 = document.querySelector("#item8");
+ const i9 = document.querySelector("#item9");
+ const i10 = document.querySelector("#item10");
+ const i11 = document.querySelector("#item11");
+ const i12 = document.querySelector("#item12");
+ const i13 = document.querySelector("#item13");
+ const i14 = document.querySelector("#item14");
+ const i15 = document.querySelector("#item15");
+ const i16 = document.querySelector("#item16");
+ const i17 = document.querySelector("#item17");
+ const i18 = document.querySelector("#item18");
+ const i19 = document.querySelector("#item19");
+ const i20 = document.querySelector("#item20");
+
+ arrItems = [i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20]
+
 let inputElement = document.querySelector("#input");
 let doneButtonElement = document.getElementById('add');
 let resetButtonElement = document.getElementById('reset');
@@ -28,6 +51,9 @@ function Knapsack() {
 						currentWeight += itemValues[i].weight;
             currentValue  += itemValues[i].value;
 					}
+          if (selector.value === arrItems[i].textContent) {
+            arrItems[i].style = "display: none"
+          }
 				}
 				for (let i = 0; i < itemValues.length; i++) {
 					if (itemValues[i].weight + currentWeight > inputElement.value) {
@@ -72,8 +98,8 @@ let itemValues = [
   { name: "Keyboard", weight: 1, value: 2500 },
   { name: "RCHelicopter", weight: 1, value: 10000 },
   { name: "USB Cable", weight: 0.25, value: 1000 },
-  { name: "BluetoothSpeaker", weight: 1.5, value: 5000 },
-  { name: "GamePads", weight: 1, value: 2000 },
+  { name: "BT Speaker", weight: 1.5, value: 5000 },
+  { name: "Gamepads", weight: 1, value: 2000 },
   { name: "PS4", weight: 3, value: 200000 },
   { name: "iPad", weight: 2, value: 150000 },
 ]
@@ -85,3 +111,7 @@ document.addEventListener('keypress', (event)=> {
   if(keyCode === 13) {
     Knapsack();
   }})
+
+ 
+  
+
