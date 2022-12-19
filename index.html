@@ -4,9 +4,54 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="assets/styles/style.css">
+  <title>KnapSack</title>
 </head>
 <body>
-  
+  <div class="items">
+    <div id="intro">
+      <h1>🎒KnapSack</h1>
+    </div>
+    <div class="inputmaxweight">
+      <input max="23" type="number" placeholder="📝Input Maximum Weight (kg)" class="input" id="input">
+      <span class="addclass"><button id="add" onclick="Knapsack()">✔️</button></span>
+    </div>
+    <div class="manipulate">
+    <select id="selected">
+      <option> Choose Items</option>
+      <option class="item item1" id="item1" value="iPhone13">iPhone13</option>
+      <option class="item item2" id="item2" value="Laptop">Laptop</option>
+      <option class="item item3" id="item3" value="HeadPhones">HeadPhones</option>
+      <option class="item item4" id="item4" value="Yams">Yams</option>
+      <option class="item item5" id="item5" value="TeddyBear">TeddyBear</option>
+      <option class="item item6" id="item6" value="Mango">Mango</option>
+      <option class="item item7" id="item7" value="iMac">iMac</option>
+      <option class="item item8" id="item8" value="Pillow">Pillow</option>
+      <option class="item item9" id="item9" value="Corn">Corn</option>
+      <option class="item item10" id="item10" value="Horn">Horn</option>
+      <option class="item item11" id="item11" value="Trumpet">Trumpet</option>
+      <option class="item item12" id="item12" value="Shacker">Shacker</option>
+      <option class="item item13" id="item13" value="Mouse">Mouse</option>
+      <option class="item item14" id="item14" value="Keyboard">Keyboard</option>
+      <option class="item item15" id="item15" value="RCHelicopter">RCHelicopter</option>
+      <option class="item item16" id="item16" value="USB Cable">USB Cable</option>
+      <option class="item item17" id="item17" value="BT Speaker">BT Speaker</option>
+      <option class="item item18" id="item18" value="Gamepads">Gamepads</option>
+      <option class="item item19" id="item19" value="PS4">PS4</option>
+      <option class="item item20" id="item20" value="iPad">iPad</option>
+    </select>
+  </div> <br>
+      <legend>Items in the Sack:</legend>
+      <div id="clicked" readonly></div> <br>
+      <div class="left">Status&nbsp; <span id="state" readonly>&nbsp&nbsp&nbsp</span></div> <br>
+   <legend>Data</legend>
+   <div id="status" readonly></div> <br>
+
+   Max Weight:&nbsp;<span id="max-w">&nbsp</span><br>
+
+   <button style="padding: 5px; background: rgba(240, 85, 14, 0.986); border-radius: 5px; border: none; float: right;" id="reset">🔄Reset</button>
+  </div>
 </body>
+<script src="assets/scripts/app.js">
+</script>
 </html>
