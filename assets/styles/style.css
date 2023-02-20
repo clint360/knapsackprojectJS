@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system;
+  font-size: 97%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background: url("../images/sack.jpeg");
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+#intro {
+  padding: 20px;
+  margin: 5px;
+  color: #000;
+  border-radius: 5px;
+  font-size: 2rem;
+}
+
+#intro h1 {
+  text-align: center;
+}
+
+.inputmaxweight {
+  text-align: center;
+  margin: auto;
+  padding-bottom: 15px;
+}
+
+.input {
+  padding: 5px;
+  width: 83%;
+}
+
+.items {
+  padding: 20px;
+  background: #b3aeae;
+  margin: 10px;
+  color: #000;
+  border-radius: 5px;
+  width: 60%;
+  max-width: 30rem;
+  font-weight: 500;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.manipulate {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#selected {
+  flex-basis: 100%;
+  border-radius: 4px;
+  background: transparent;
+  border: 2px solid white;
+  margin: 2px;
+}
+
+.item:disabled {
+  display: none;
+}
+
+#selected:disabled {
+  color: red;
+}
+
+.addclass {
+  width: 10px;
+}
+
+#add {
+  width: 50px;
+  padding: 5px;
+  color: white;
+  background: #03c403;
+  border: 2px solid white;
+  border-radius: 4px;
+  margin: 0;
+}
+
+#clicked,
+#status {
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid white;
+  color: white;
+  padding: 1px 5px;
+  height: auto;
+  font-weight: 300;
+}
+
+#clicked {
+  background: #000000c7;
+  color: white;
+  height: 200px;
+  overflow-y: scroll;
+}
+
+#status {
+  background: #6b0000d0;
+  color: white;
+  min-height: 20px;
+  height: auto;
+}
+
+.left {
+  float: right;
+}
+
+#max-w {
+  color: red;
+  font-size: 20px;
+  font-weight: 500;
+  background: white;
+  border-radius: 50%;
+  padding: 0 10px;
+}
+
+#state {
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  padding: 1px 5px;
+  background: #00f100;
+  border: 2px solid white;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
